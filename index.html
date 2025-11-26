@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario Estudiantil</title>
+
+<link rel="stylesheet" href="estilo.css">
+
+<!-- Librería PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+<div class="form-card" id="formulario">
+    <div class="titulo-form">
+        <h2 class="titulo-principal">📘 Formulario de Registro para Exposición</h2>
+        <p class="subtitulo">Área: Educación Musical</p>
+        <p class="docente">Profesor: Humberto Yupanqui C.</p>
+    </div>    
+
+    <h2 style="font-size: 15px; font-weight: normal; margin-top: 10px;">
+        Estimado estudiante:  
+        Usted está siendo invitado(a) a participar como expositor o apoyo en la presentación de productos del área de Educación Musical.  
+        Si desea participar, complete el siguiente formulario y envíe la ficha al profesor.
+    </h2>
+
+    <label>Nombre y Apellido</label>
+    <input type="text" id="nombre" placeholder="Escribe tu nombre completo">
+
+    <label>Curso</label>
+    <select id="curso">
+        <option value="">Seleccione su curso</option>
+        <option>1ro Secundaria</option>
+        <option>2do Secundaria</option>
+        <option>3ro Secundaria</option>
+        <option>4to Secundaria</option>
+        <option>5to Secundaria</option>
+        <option>6to Secundaria</option>
+    </select>
+
+    <label>¿Cómo participará?</label>
+    <select id="participacion">
+        <option value="">Seleccione una opción</option>
+        <option>Expositor</option>
+        <option>Apoyo</option>
+    </select>
+
+    <label>Número de Celular</label>
+    <input type="tel" id="celular" placeholder="Ej: 76543210">
+
+    <button class="btn-enviar" onclick="guardarEnviar()">💾 Guardar y Enviar</button>
+</div>
+
+<!-- SECCIÓN DE DESCARGA -->
+<div class="form-card hidden" id="descargaSection">
+    <h2>✔ Registro Completado</h2>
+    <p>Tu ficha está lista para descargar.</p>
+
+    <button class="btn-descargar" onclick="descargarPDF()">⬇ Descargar PDF</button>
+    <button class="btn-salir" onclick="salir()">🚪 Salir</button>
+
+    <p class="nota">
+        📲 Una vez descargado el PDF, envíalo por WhatsApp 👉  
+        <a href="https://wa.link/05v12w" target="_blank">Click aquí</a>
+    </p>
+</div>
+
+<script src="formulario.js"></script>
+
+</body>
+</html>
